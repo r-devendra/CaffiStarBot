@@ -1,5 +1,5 @@
 {
-  "url": "https://caffistarbot.t.me", // required, bot username
-  "name": "CaffiStar", // required, app name
-  "iconUrl": "https://projectoid.in/assets/img/p-letter-green.png", // required, logo
+  "url": "https://caffistarbot.t.me",
+  "name": "CaffiStar",
+  "iconUrl": "https://projectoid.in/assets/img/p-letter-green.png",
 }
