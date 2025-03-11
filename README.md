@@ -1,100 +1,84 @@
-# CaffiStarBot: A Telegram Donation Platform
-*Empower creators with seamless donations via Telegram Stars and TON cryptocurrency.*
+# CaffiStarBot - chat bot
+It is repository for chat bot: [@CaffiStarBot](https://t.me/CaffiStarBot)
 
-**Contest Submission by:** [@devendra](https://t.me/devendra)  
-**Demo Bot:** [@CaffiStarBot](https://t.me/CaffiStarBot)  
-**Created On:** March 11, 2025
+## What it is?
+This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
 
----
+[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
 
-## 🚀 Project Overview
+A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
 
-**CaffiStarBot** is an innovative Telegram bot that enables creators to receive donations from their supporters using Telegram Stars (XTR) or TON cryptocurrency. Built on a custom Telegram bot maker platform, this project combines a sleek Vue.js-powered web app with a robust backend to provide a seamless donation experience. Whether you're a fan saying "thanks" with a coffee or a supporter backing a creator's next big idea, CaffiStarBot makes it simple, secure, and fun!
+## Create your own bot for Telegram from this Git repo
 
----
+How to create bot?
+1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
+2. Create bot in App and add Secret Token
+3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
+4. Do import for this git repo
 
-## ✨ Key Features
+Now you can talk with yours new Telegram Bot
 
-- **Dual Payment Options**: Donate using Telegram Stars or TON cryptocurrency, catering to both casual supporters and crypto enthusiasts.
-- **Anonymous Donations**: Supporters can choose to stay anonymous, ensuring privacy when desired.
-- **Real-Time Updates**: Donation history and supporter lists update instantly, reflecting contributions as they happen.
-- **TON Wallet Integration**: Seamless connection to TON wallets via TON Connect UI for secure crypto transactions.
-- **Responsive Web App**: A Vue.js-based interface that works flawlessly within Telegram’s WebApp framework.
-- **Persistent Data**: Donation and page data are stored reliably using the bot platform’s property system.
+See [more](https://help.bots.business/getting-started)
 
----
+## Commands - in commands folder
+File name - it is command name (Bot it can be rewritten in command description)
 
-## 🛠️ How It Works
+Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
 
-1. **Setup**: Creators initialize their donation page using the `/setup` command (planned feature).
-2. **Start Interaction**: Users interact with the bot via `/start`, launching a web app with a "Buy me a coffee" button.
-3. **Donate**: Supporters choose their payment method (Stars or TON), enter an amount, and add an optional message.
-4. **Process Payment**:
-   - **Stars**: Processed via Telegram’s `createInvoiceLink` API.
-   - **TON**: Handled through TON Connect UI with transactions sent to the creator’s wallet.
-5. **Confirmation**: Donations are recorded, and the creator’s supporter list updates in real-time.
+### Command description
+It is file header:
 
----
+    /*CMD
+      command: /test
+      help: this is help for ccommand
+      need_reply: [ true or false here ]
+      auto_retry_time: [ time in sec ]
+      answer: it is example answer for /test command
+      keyboard: button1, button2
+      aliases: /test2, /test3
+    CMD*/
 
-## 🎨 Tech Stack
+See [more](https://help.bots.business/commands)
 
-- **Frontend**: Vue.js for a dynamic, responsive web app interface.
-- **Payment Systems**:
-  - Telegram Stars API for in-app purchases.
-  - TON Connect UI for TON cryptocurrency transactions.
+### Command body
+It is command code in JavaScript.
+Use Bot Java Script for logic in command.
 
----
+For example:
+> Bot.sendMessage(2+2);
 
-## 🌟 Why It’s Special
+See [more](https://help.bots.business/scenarios-and-bjs)
 
-- **User-Friendly**: Designed for Telegram users, with no external apps required.
-- **Creator-Focused**: Empowers Telegram creators to monetize their communities effortlessly.
-- **Innovative**: Combines traditional in-app purchases (Stars) with cutting-edge blockchain payments (TON).
-- **Scalable**: Built with modularity in mind, ready for future features like donation goals or analytics.
 
----
+## Libraries - in libs folder
+You can store common code in the libs folder. File name - it is library name.
 
-## 🔧 Installation & Setup (For Developers)
+For example code in myLib.js:
 
-1. **Clone the Project**:
-  Create a new bot on Bots.business app,
-  go to tools tab, enter the following repository url:
-   ```bash
-   git@github.com:r-devendra/CaffiStarBot.git
-   ```
-   Hit Import from github
-2. **Configure the Bot**: Deploy on a compatible Telegram bot maker platform.
-3. **Set Up Commands**:
-   - `/start`: Launches the web app.
-   - `manifestData`: Holds the Image, Name and Url of Bot for Ton Wallets
-   - `/setup`: Setups everything in place.
-4. **Dependencies**: Vue.js, TON Connect UI and Telegram WebApp scripts are included in the web app via cdn.
-5. **Test**: Use `@CaffiStarBot` to see it in action!
+    function hello(){ Bot.sendMessage("Hello from lib!") }
+    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
 
----
+    publish({
+      sayHello: hello,
+      sayGoodbyeTo: goodbye
+    })
 
-## 🎯 Future Enhancements
+then you can run in any bot's command:
 
-- **Multiple Creators Page**: Creators will be ableto create their own custom pages in future.
-- **Donation Goals**: Let creators set fundraising targets.
-- **Analytics Dashboard**: Provide creators with insights into their supporters and earnings.
-- **Multi-Language Support**: Expand accessibility for global users.
-- **Custom Themes**: Allow creators to personalize their donation pages further.
+    Libs.myLib.hello()
+    Libs.myLib.sayGoodbyeTo("Alice")
 
----
+See [more](https://help.bots.business/git/library)
 
-## 🤝 Try It Out!
+## Other bots example
+See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
 
-Interact with the live demo at [@CaffiStarBot](https://t.me/CaffiStarBot). Send a small donation to see the magic happen—and maybe buy me a coffee while you’re at it! ☕
 
----
+## Other help
+[Help.bots.business](https://help.bots.business)
 
-## 🙏 Acknowledgments
+## API
+See [API](https://api.bots.business/docs#/docs/summary)
 
-- Built with ❤️ by [@devendra](https://t.me/devendra).
-- Inspired by the Telegram ecosystem and the TON blockchain community.
-- Thanks to the contest organizers for the opportunity to showcase this project!
 
----
-
-**CaffiStarBot** is more than a bot—it’s a bridge between creators and their supporters, brewed with innovation and a dash of caffeine. Let’s raise a cup to creativity! Cheers! ☕
+![](https://bots.business/images/web-logo.png)

@@ -22,10 +22,8 @@ let dataHandler = Libs.Webhooks.getUrlFor({
   user_id: user.id
 })
 
-const manifesta =  Bot.getProp("manifestFile");
 const tonWall = Bot.getProp("myTonWallet");
-
-if(!manifesta || !tonWall){
+if( !tonWall){
   Bot.sendMessage("First setup bot with `/setup` command");
   return; 
 }
