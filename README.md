@@ -9,7 +9,7 @@
 
 ## 🚀 Project Overview
 
-**CaffiStarBot** is an innovative Telegram bot that enables creators to receive donations from their supporters using Telegram Stars (XTR) or TON cryptocurrency. Built on a custom Telegram bot maker platform, this project combines a sleek Vue.js-powered web app with a robust backend to provide a seamless donation experience. Whether you're a fan saying "thanks" with a coffee or a supporter backing a creator's next big idea, CaffiStarBot makes it simple, secure, and fun!
+**CaffiStarBot** is an innovative Telegram bot that enables creators to receive donations from their supporters using Telegram Stars (XTR) or TON cryptocurrency. Built on Bots.Business platform, this project combines a sleek Vue.js-powered web app with a robust backend to provide a seamless donation experience. Whether you're a fan saying "thanks" with a coffee or a supporter backing a creator's next big idea, CaffiStarBot makes it simple, secure, and fun!
 
 ---
 
