@@ -33,7 +33,7 @@ WebApp.render({
         // it is CSS file - see app.css command
         appCSS: getUrl('appCSS'),
         
-        manifestUrl: Bot.getProp("manifestFile")
+        manifestUrl: getUrl('manifestUrl')
    }
 })
 

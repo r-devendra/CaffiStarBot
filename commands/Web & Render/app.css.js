@@ -835,7 +835,7 @@ CMD*/
             font-size: 12px;
         }
         .support-as {
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
             gap: 5px;
         }

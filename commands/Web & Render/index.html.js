@@ -248,7 +248,7 @@ CMD*/
     </div>
 <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-            manifestUrl: "<%options.manifestUrl%>"',
+            manifestUrl: "<%options.manifestUrl%>",
            // buttonRootId: 'ton-connect',
 
         }); 
@@ -259,4 +259,3 @@ CMD*/
     <script src="<%options.appJS%>"></script>
 </body>
 </html>
-

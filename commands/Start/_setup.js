@@ -3,7 +3,7 @@
   help: 
   need_reply: false
   auto_retry_time: 
-  folder: 
+  folder: Start
 
   <<ANSWER
 
@@ -22,9 +22,6 @@ if(content){
 }
 
 Bot.setProp("myTonWallet", "UQDmyGOVI5ecxh8oZYrKQZ9hhTqzeaLFmnnLLtkuE9Q9flg6") //update ton wallet address for receiving the funds
-
-let url = Libs.Webhooks.getUrlFor({command: "manifestFile"});
-Bot.setProp("manifestFile", url);
 
 const pageManager = new PageManager();
 // Define your page configuration
