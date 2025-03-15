@@ -1,7 +1,7 @@
 # CaffiStarBot: A Telegram Donation Platform
 *Empower creators with seamless donations via Telegram Stars and TON cryptocurrency.*
 
-**Contest Submission by:** [@devendra](https://t.me/devendra)  
+**Contest Submission by:** [@devendra](https://t.me/devendra)  & [@abhishek71599](https://t.me/abhishek71599)
 **Demo Bot:** [@CaffiStarBot](https://t.me/CaffiStarBot)  
 **Created On:** March 11, 2025
 
